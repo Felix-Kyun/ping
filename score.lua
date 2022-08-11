@@ -33,3 +33,11 @@ end
 function Score:ai()
   self.aiCurrentScore = self.aiCurrentScore + 10
 end
+
+function Score:playerReset()
+  self.playerCurrentScore = 0
+end
+
+function Score:aiReset()
+  self.aiCurrentScore = 0
+end

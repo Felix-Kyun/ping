@@ -40,9 +40,11 @@ end
 
 function Ball:deflect()
   if Ball:collide(Player) then 
+    Score:player()
     self.xVel = self.speed 
     self.yVel = ( Ball:getCollisionMultiplier(Player) * 5 )
   elseif Ball:collide(AI) then 
+    Score:ai()
     self.xVel = -( self.speed ) 
     self.yVel = ( Ball:getCollisionMultiplier(AI) * 5 )
   end
@@ -61,12 +63,12 @@ end
 function Ball:Scored()
   if self.x < 0 then
     Ball:reset()
-    Score:ai()
+    Score:playerReset()
     self.xVel = self.speed
   end
   if ( self.x + self.width ) > love.graphics.getWidth() then 
     Ball:reset()
-    Score:player()
+    Score:aiReset()
     self.xVel = -( self.speed )
   end
 end
