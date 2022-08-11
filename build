@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+[[ -f ./ping.love ]] && rm ping.love
+zip -9 -r ping.love . --exclude ./.git\*
