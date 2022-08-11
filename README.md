@@ -10,7 +10,7 @@ My attempt to learn lua by building a game with lua and love.
 - clone repo 
     ```bash
     git clone https://github.com/Felix-Kyun/ping
-    cd Ping-Pong
+    cd ping
     ```
 - run the start script 
     ```bash
